@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Forms</title>
+    <style>
+        *{
+            margin: 0; padding:0;
+            box-sizing: border-box;
+        }
+        body{
+            display: grid;
+            place-items: center;
+            min-height: 100vh;
+            background: #eee;
+        }
+        body > div{
+            width: 50%;
+        }
+        h2{
+            margin-bottom:1em;
+        }
+        form input:not([type="checkbox"]), form select{
+            display: block;
+            width: 100%;
+            padding: 1em;
+            margin-bottom:1em;
+            border:1px solid #bbb;
+            border-radius: .25em;
+        }
+        form label{
+            display: block;
+            margin-bottom: 1em;
+        }
+        form button{
+            padding:1em;
+            background-color: orange;
+            border:none;
+            position: relative;
+            left:100%;
+            transform: translateX(-100%);
+        }
+    </style>
+</head>
+<body>
+    <div>
+
+        <h2>This is my amazing form</h2>
+        <form action="">
+            <input type="text" placeholder="Type your name">
+            <input type="email" name="" id="" placeholder="Type your email">
+            <input type="datetime" name="" id="" placeholder="Type the date">
+            <select name="" id="">
+                <option value="">Option 1</option>
+                <option value="">Option 2</option>
+                <option value="">Option 3</option>
+            </select>
+            <label for="">
+                <input type="checkbox" name="" id="">I agree to the terms and conditions
+            </label>
+            <!-- <input type="submit" value="submit" /> -->
+            <button type="submit">Submit</button>
+        </form>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Grid</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin:0; padding:0;
+        }
+        a{
+            color:#222;
+            text-decoration: none;
+        }
+        body{
+            min-height: 100vh;
+            display: grid;
+            grid-template-areas: 
+                "header header"
+                "article aside"
+                "section aside"
+                "footer footer";
+            grid-template-columns: auto 25%;
+            grid-template-rows: auto 1fr auto auto;
+        }
+        header{
+            background: red;
+            grid-area: header;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding:1em;
+        }
+        header nav ul{
+            list-style: none;
+            display: flex;
+        }
+        header nav ul li a{
+            margin-left:1em;
+            display: block;
+        }
+        article{
+            background: lightblue;
+            grid-area: article;
+            padding:2em;
+        }
+        aside{
+            background: yellow;
+            grid-area: aside;
+            padding: 2em;
+        }
+        section{
+            background: purple;
+            grid-area: section;
+            padding:2em;
+            display: grid;
+            /* grid-template-columns: 1fr 1fr 1fr; */
+            grid-template-columns: repeat(2,1fr) 2fr;
+            grid-gap:1em;
+        }
+        section div{
+            background: lightgreen;
+            padding:1em;
+        }
+        footer{
+            background: blue;
+            grid-area: footer;
+            padding:2em;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="#">Website title</a>
+        <nav>
+            <!-- ul>li*5>a[href="#"]{Link $}-->
+            <ul>
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>
+                <li><a href="#">Link 4</a></li>
+                <li><a href="#">Link 5</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <article>
+        <h1>This is header of my article</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam illo, quasi dolore quibusdam maiores quisquam aliquam rem vero quidem voluptate doloremque impedit. Veniam quia in ab! Minima, totam vel, ullam facilis aspernatur corporis sapiente voluptas quia non cum minus nam quisquam eos reiciendis quod maxime soluta magnam voluptates ipsum magni voluptatem. At explicabo deserunt excepturi assumenda ratione eaque qui autem magnam alias amet, porro veniam suscipit mollitia, dolore nostrum, quasi ducimus delectus sint aperiam ex neque ea. Nesciunt eligendi perspiciatis autem ad labore at nam, optio saepe deserunt harum id esse eum, sint sapiente molestias culpa quisquam ratione similique ut? Magni, repellat cupiditate dignissimos tempora numquam harum commodi officiis. Ut quam veritatis quibusdam sunt doloribus recusandae saepe possimus, quasi eum officia dolor? Commodi officia earum laborum, quidem nihil sunt odio, aliquam quis consequatur officiis, temporibus nobis sequi perferendis impedit libero. Ut perferendis laborum hic nisi voluptates maxime nobis, perspiciatis molestias harum provident, accusantium amet suscipit quam eligendi expedita error inventore neque. Excepturi, iste totam sed vel doloribus blanditiis dolor tempora non! Exercitationem provident autem veritatis dolore sunt asperiores ab non reiciendis. Vero eius sequi deserunt nesciunt ab distinctio blanditiis odit aspernatur commodi tempore soluta perspiciatis neque saepe ullam aut, doloribus necessitatibus dicta tempora? Consequuntur quis sunt eveniet voluptatem culpa nesciunt iusto, obcaecati possimus sequi aliquam delectus sapiente maxime at dicta?</p>
+    </article>
+
+    <aside>
+        <!--ul>li*5>a[href="#"]{Link #$}-->
+        <ul>
+            <li><a href="#">Link #1</a></li>
+            <li><a href="#">Link #2</a></li>
+            <li><a href="#">Link #3</a></li>
+            <li><a href="#">Link #4</a></li>
+            <li><a href="#">Link #5</a></li>
+        </ul>
+    </aside>
+
+    <section>
+        <!-- div*3>(h2{Title $}+(p>lorem10)+a[href=""]{Link $}) -->
+        <div>
+            <h2>Title 1</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, quis!</p>
+            <a href="#">Link 1</a>
+        </div>
+        <div>
+            <h2>Title 2</h2>
+            <p>Ex est adipisci eius dicta quaerat similique repellendus debitis illum!</p>
+            <a href="#">Link 2</a>
+        </div>
+        <div>
+            <h2>Title 3</h2>
+            <p>Quae, repudiandae consectetur! Veniam quis vitae possimus, magni et tempore.</p>
+            <a href="#">Link 3</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>This is my footer</p>
+    </footer>
+
+</body>
+</html>

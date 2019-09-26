@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pseudo elements</title>
+    <!-- 
+        Try to reach the same result as in example.png
+    -->
+    <style>
+        body{
+            margin:4em;
+        }
+        h2{
+            position: relative;
+        }
+        h2::after{
+            content:"";
+            display: inline-block;
+            position: relative;
+            width:50px; height:2px;
+            background-color: transparent;
+            transform: translateX(300px);
+            vertical-align: middle;
+            transition: all .5s ease;
+        }
+        h2:hover::after{
+            transform: translateX(10px);
+            background-color:red;
+        }
+        p{
+            padding:3em;
+            background: #eee;
+            position: relative;
+        }
+        p::after{
+            content: "";
+            position: absolute;
+            left:0; top:0; bottom:0;
+            background-color: transparent;
+            width:1em;
+            transition: background-color .5s ease;
+        }
+        p:hover::after{
+            background-color: #222;
+        }
+    </style>
+</head>
+<body>
+    <h2>This is my title</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, consequatur.</p>
+    <h2>This is my title</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, consequatur.</p>
+    <h2>This is my title</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, consequatur.</p>
+    
+</body>
+</html>

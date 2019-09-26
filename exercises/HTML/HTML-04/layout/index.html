@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Layout example without Bootstrap</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div>
+            <a>MyWebsite</a>
+            <p>Amazing stuff</p>
+        </div>
+        
+        <nav>
+            <ul>
+                <li><a href="#landing">Home</a></li>
+                <li><a href="#details">Details</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="landing">
+        <img src="//unsplash.it/200/200" />
+        <h1>Lorem ipsum dolor sit amet.</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo, consectetur.</p>
+        <a class="button" href="#contact">Contact me</a>
+    </section>
+
+    <section id="details">
+
+        <div>
+            <i class="fab fa-html5"></i>
+            <h2>HTML</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam, laboriosam!</p>
+            <a class="button" href="#">Read more</a>
+        </div>
+
+        <div>
+            <i class="fab fa-js"></i>
+            <h2>Javascript</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam, laboriosam!</p>
+            <a class="button" href="#">Read more</a>
+        </div>
+
+        <div>
+            <i class="fab fa-node"></i>
+            <h2>NodeJS</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam, laboriosam!</p>
+            <a class="button" href="#">Read more</a>
+        </div>
+
+    </section>
+
+    <section id="projects">
+        <ul class="grid">
+            <li>
+                <h2>Project name 1</h2>
+                <img src="//unsplash.it/800/600/?random=1" alt="">
+            </li>
+            <li>
+                <h2>Project name 2</h2>
+                <img src="//unsplash.it/800/600/?random=2" alt="">
+            </li>
+            <li>
+                <h2>Project name 3</h2>
+                <img src="//unsplash.it/800/600/?random=3" alt="">
+            </li>
+            <li>
+                <h2>Project name 4</h2>
+                <img src="//unsplash.it/800/600/?random=4" alt="">
+            </li>
+            <li>
+                <h2>Project name 5</h2>
+                <img src="//unsplash.it/800/600/?random=5" alt="">
+            </li>
+            <li>
+                <h2>Project name 6</h2>
+                <img src="//unsplash.it/800/600/?random=6" alt="">
+            </li>
+            <li>
+                <h2>Project name 7</h2>
+                <img src="//unsplash.it/800/600/?random=7" alt="">
+            </li>
+            <li>
+                <h2>Project name 8</h2>
+                <img src="//unsplash.it/800/600/?random=8" alt="">
+            </li>
+        </ul>
+    </section>
+
+    <footer id="contact">
+        <h2>Contact me for more details</h2>
+        <form action="">
+            <input type="text" placeholder="Type your name">
+            <input type="text" placeholder="Type your email">
+            <select>
+                <option value="">Some topic</option>
+                <option value="">Some topic</option>
+                <option value="">Some topic</option>
+                <option value="">Some topic</option>
+                <option value="">Some topic</option>
+            </select>
+            <textarea name="" id="" placeholder="Type your message here"></textarea>
+            <label for=""><input type="checkbox" name="" id="">I accept terms and conditions.</label>
+            <button class="button" type="submit">Submit</button>
+        </form>
+        <p>This is my footer. All rights reserved bla bla</p>
+    </footer>
+</body>
+</html>

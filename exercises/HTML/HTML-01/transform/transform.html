@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Transform examples</title>
+    <style>
+        body{
+          margin:3em;
+        }
+        body > div{
+          border:2px solid;
+          padding: 2em;
+        }
+        div.box{
+            width:100px; height:100px;
+            border:1px solid;
+            transition: transform 500ms ease;
+        }
+        div#trx300:hover div.box{
+          transform: translateX(300px);
+        }
+        div#try50:hover div.box{
+          transform: translateY(50px);
+        }
+        div#trr45:hover div.box{
+          transform: rotate(45deg);
+        }
+        div#trs12:hover div.box{
+          transform: scale(1.2);
+        }
+        div#trsk45:hover div.box{
+          transform: skew(-45deg);
+        }
+        div#trall:hover div.box{
+          transform: scale(0.5) translate(300px, 50px) rotate(-45deg) ;
+        }
+    </style>
+  </head>
+  <body>
+    
+    <h2>Hover the box to move it by 300px on the X axis</h2>
+    <p>transform: translateX(300px)</p>
+    <div id="trx300">
+      <div class="box"></div>
+    </div>
+
+    <h2>Hover the box to move it by 50px on the Y axis</h2>
+    <p>transform: translateY(50px)</p>
+    <div id="try50">
+      <div class="box"></div>
+    </div>
+
+    <h2>Hover the box to rotate it by 45 degree</h2>
+    <p>transform: rotate(45deg)</p>
+    <div id="trr45">
+      <div class="box"></div>
+    </div>
+
+    <h2>Hover the box to scale it by factor 1.2</h2>
+    <p>transform: scale(1.2)</p>
+    <div id="trs12">
+      <div class="box"></div>
+    </div>
+
+    <h2>Hover the box to skew it by 45deg</h2>
+    <p>transform: skew(45deg)</p>
+    <div id="trsk45">
+      <div class="box"></div>
+    </div>
+    
+    <h2>Hover the box to apply scale, translate and rotate at the same time</h2>
+    <p>transform: scale(0.5) translate(300px, 50px) rotate(-45deg);</p>
+    <div id="trall">
+      <div class="box"></div>
+    </div>
+
+  </body>
+</html>
