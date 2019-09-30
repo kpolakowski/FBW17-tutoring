@@ -28,30 +28,28 @@ git add .
 git commit -m “DESCRIPTION OF A COMMIT”
 ```
 
-4. After I push new tasks, you can pull them from my **_origin/master_** branch with:
+4. After I push new tasks, you can pull everything from remote **_origin_** with:
 
 ```
-git checkout master
-git pull
+git pull origin
 ```
 
-5. After pulling you can merge your branch with your **_local master_** branch by writing:
+5. After that you can merge **YOUR BRANCH NAME** with your local master branch by writing:
 
 ```
-git checkout YOUR_BRANCH_NAME
 git merge master
 ```
 
 Answers to the tasks are in branch **_solutions_**.
 
-## IMPORTANT THINGS
+## Important things
 
 - always check in which branch you are before committing anything
 - do the exercises **only** in YOUR branch, **not in master**
 - do not commit anything to your local master branch, if you do it you won’t be able to pull from the origin remote; you can undo it by writing
 
 ```
-git reset --hard ~HEAD
+git reset --hard HEAD~
 ```
 ## Some theory
 - Explanation of for() loop [[link to presentation](https://docs.google.com/presentation/d/13lbxwkMOszzganDVPB0VMpAHTIP_dE7YUoBetAzw5D8/edit?usp=sharing)]
