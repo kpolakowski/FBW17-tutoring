@@ -4,17 +4,20 @@
 
 Create 2 files:
 
-- index.js
-- logger.js
+- index.js-ok
+- logger.js-ok
 
 ## Part 1
 
-1. Go to file `logger.js` and import `fs` module
+1. Go to file `logger.js` and import `fs` module-ok
+
 2. Create a variable `filename` that is going to store a path to a file where we going to save our entries
+
 3. Create a function called `addEntry`, which should take 2 arguments called `actionName` and `countArguments`
+
 4. This function should append a message to a file specified in `filename`.
 
-   - This message should be in a following format: `<current-date-in-ISO-format>:Method <actionName> was called with <countArguments> arguments` (\*)
+   - This message should be in a following format: `<current-date-in-ISO-format>:Method <actionName> was called with <countArguments> arguments` (\*) - ok
    - Each message in a file should be in a separate file
 
 5. Export `addEntry` function
@@ -23,7 +26,7 @@ Create 2 files:
 
 ## Part 2
 
-1. Go to `index.js` and import logAction method from `logger.js` file
+1. Go to `index.js` and import addEntry method from `logger.js` file
 2. Create an empty array called `users`
 3. Create a variable `consoleArguments` that is going to store arguments from our console, store only arguments with index bigger or equal 2
 4. Create 3 empty functions expressions with following names: addUsers, addUser, showUser
