@@ -14,3 +14,5 @@ const printTotalPrice = books => {
   console.log(books.reduce((sum, book) => sum + book.price, 0));
   return books;
 };
+
+const printBooksOfAuthor = (author, callback) => {};
