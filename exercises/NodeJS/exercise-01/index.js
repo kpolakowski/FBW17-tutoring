@@ -15,4 +15,11 @@ const printTotalPrice = books => {
   return books;
 };
 
-const printBooksOfAuthor = (author, callback) => {};
+const printBooksOfAuthor = (author, callback) => {
+  const result = books.filter(book => author === author);
+  if (result) {
+    console.log("Success");
+  } else {
+    console.log("No result");
+  }
+};
