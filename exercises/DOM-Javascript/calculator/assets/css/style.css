@@ -1,0 +1,16 @@
+.operator {
+    min-width: 1rem;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+
+  @media all and (min-width: 576px) {
+    h1 {
+      font-size: 3.5rem;
+      line-height: 3.5rem;
+    }
+  }
