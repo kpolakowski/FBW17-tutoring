@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 2vmin;
+}
+
+body {
+  background: #ddd;
+  font-family: Roboto;
+}
+
+header {
+  padding: 1rem;
+  background: #ff5a5a;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header h1 {
+  text-shadow: 1px 1px 0 #c00000;
+}
+
+header input {
+  width: 20%;
+  border-radius: 2rem;
+  border: 1px solid #c00000;
+  outline: none;
+  padding: .75rem 1.5rem;
+}
+
+main {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 1rem;
+  margin: 1rem;
+  -ms-grid-columns: (1fr)[6];
+      grid-template-columns: repeat(6, 1fr);
+}
+
+.track {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid #eee;
+  position: relative;
+  overflow: hidden;
+}
+
+.track:hover > div {
+  -webkit-transform: none;
+          transform: none;
+  opacity: 1;
+}
+
+.track img {
+  display: block;
+  width: 100%;
+}
+
+.track > div {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1rem;
+  color: #fff;
+  opacity: 0;
+  -webkit-transform: scale(1) rotate(10deg);
+          transform: scale(1) rotate(10deg);
+  -webkit-transition: all .25s ease-in;
+  transition: all .25s ease-in;
+}
+
+.track > div .title {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.track > div .artist {
+  font-size: 1.1rem;
+}
+
+.track > div .releaseDate {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  font-size: .8rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 1rem 0;
+  margin-top: 1rem;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  color: yellow;
+}
+
+.track > div .price {
+  background: #ec7e7e;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  padding: .5rem 1rem;
+  font-weight: bold;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.25);
+}
