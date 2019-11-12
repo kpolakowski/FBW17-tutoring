@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Exercise js-04</title>
+    <style>
+      form {
+        display: flex;
+      }
+      input {
+        flex-grow: 1;
+        outline: none;
+      }
+      .found {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <input
+        id="keyword"
+        type="text"
+        autocomplete="off"
+        placeholder="Type something and click search to highlight it"
+      />
+      <button type="submit">Search</button>
+    </form>
+
+    <div id="content">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut
+        reprehenderit totam assumenda culpa neque temporibus dolorum aliquid nam
+        repellat maiores?
+      </p>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam vitae
+        perferendis fugit? Sequi, voluptates aliquam!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto
+        officia eos accusamus libero, maiores corporis, perferendis tempora illo
+        voluptas enim at nemo voluptatem earum iure alias itaque asperiores?
+        Dolorum, nesciunt.
+      </p>
+    </div>
+    <script src="solution.js"></script>
+  </body>
+</html>

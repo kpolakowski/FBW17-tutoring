@@ -29,12 +29,12 @@
 ## Promisify
 
 1. Import `util` module to our file
-2. Use `promisify` method of this module, to create new function returning promises. Name it `printBooksOfAuthorPrUtil`. (Pass `printBooksOfAuthorCb` as argument for promisify)
+2. Use `promisify` method of this module, to create new function returning promises. Name it `printBooksOfAuthorPrUtil`. (Pass `printBooksOfAuthor` as argument for promisify)
 3. Modify `printBooks` function, by adding err parameter at the beginning
 
 ## Calling all 3 versions one after another
 
-1. First call `printBooksOfAuthorCb` with "J.K. Rowling" as argument.
+1. First call `printBooksOfAuthor` with "J.K. Rowling" as argument.
 2. Then use `printBooksOfAuthorPr` with name "J.K. Rowling"
 
    - In case of success first call `printBooks`, and after call `printTotalPrice` (both in separate "then")

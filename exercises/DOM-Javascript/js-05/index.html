@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Filtering data</title>
+    <style>
+      input {
+        display: block;
+      }
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <Label for="searchedName">Search for name</Label>
+      <input type="text" id="searchedName" autocomplete="off" />
+      <Label for="minAge">Minimum age</Label>
+      <input type="number" name="" id="minAge" value="10" />
+    </form>
+    <ul id="people"></ul>
+    <script src="index.js"></script>
+  </body>
+</html>
