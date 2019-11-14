@@ -28,19 +28,20 @@ git add .
 git commit -m “DESCRIPTION OF A COMMIT”
 ```
 
-4. After I push new tasks, you can pull everything from remote **_origin_** with:
+4. After I push new tasks to the remote, you can go back to your local master, and pull everything from remote master,
+by writing:
 
 ```
-git pull origin
+git pull origin master
 ```
 
-5. After that you can merge **YOUR BRANCH NAME** with your local master branch by writing:
+5. After that, you can switch back to your branch, and merge it with your local master branch by writing:
 
 ```
 git merge master
 ```
 
-Answers to the tasks are in branch **_solutions_**.
+Answers to the tasks in _needToKnow_ folder are in branch **_solutions_**.
 
 ## Important things
 
