@@ -1,10 +1,10 @@
 let classMate = [
-  { name: 'Karol', yearOfBirth: 1988 },
-  { name: 'Aleksander', yearOfBirth: 1980 },
-  { name: 'Simon', yearOfBirth: 1978 },
-  { name: 'Anna', yearOfBirth: 1950 },
-  { name: 'Ion', yearOfBirth: 1988 },
-  { name: 'Justin', yearOfBirth: 1998 }
+  { name: "Karol", yearOfBirth: 1988 },
+  { name: "Aleksander", yearOfBirth: 1980 },
+  { name: "Simon", yearOfBirth: 1978 },
+  { name: "Anna", yearOfBirth: 1950 },
+  { name: "Ion", yearOfBirth: 1988 },
+  { name: "Justin", yearOfBirth: 1998 }
 ];
 
 // USE FILTER TO GET ALL OBJECTS REPRESENTING PEOPLE THAT WERE BORN IN THE 1980 OR BEFORE
@@ -15,16 +15,28 @@ const filteredPeople = classMate.filter(people => {
 console.log(filteredPeople);
 const peopleBefore1980 = [];
 
-// USE FILTER TO GET ALL OBJECTS REPRESENTING PEOPLE THAT HAVE LETTER 's' or 'S' IN THEIR NAMES
-// SAVE THE RESULT TO ARRAY namesWithS AND PRINT IT TO CONSOLE
+//new name
+let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let cars = [
+  { carName: "Citroen", price: 10000 },
+  { carName: "Audi", price: 50000 },
+  { carName: "BMW", price: 70000 },
+  { carName: "Porsche", price: 100000 },
+  { carName: "Opel", price: 70000 }
+];
 
-const peopleNames = classMate.filter(person => {
-  const namesWiths = [];
-  if (
-    classMate.name === 's'.toLowerCase ||
-    classMate.name === 's'.toUpperCase
-  ) {
-    return person;
-  }
-  console.log(peopleNames);
-});
+const names = ["Karol", "Robert", "Leandro"];
+
+const printNamesWithLetter = letter => {
+  return names.filter(name => {
+    if (name.includes(letter)) {
+      return name;
+    }
+  });
+};
+
+//CASE INSENSITIVE
+console.log(printNamesWithLetter("L")); //["Karol", "Leandro"]
+console.log(printNamesWithLetter("T")); //["Robert"]
+console.log(printNamesWithLetter("E")); //["Robert", "Leandro"]
+//CARS THAT HAVE A LETTER 'O' or 'o' in name
