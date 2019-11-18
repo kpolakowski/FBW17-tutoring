@@ -1,0 +1,13 @@
+{
+  "name": "routes2",
+  "version": "1.0.0",
+  "description": "Create an http server and provide following routes - /users (html page displaying list of all users) - /login (login form) - /register (register form, adding data to a file) - /secret_data (some secret data to display in case of successful login) - /api/users/add - /api/users/login",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
