@@ -2,43 +2,84 @@ const formatDate = (date) => {
     return new Date(date).toISOString().slice(0,10);
 }
 
-const renderTracks = (tracks)=> {
-    document.querySelector("main").innerHTML = "";
-    tracks.forEach((track,i) => {
-        //const { trackName,artistName,artworkUrl100,releaseDate,trackPrice,currency, wrapperType } = track;
-        const trackEl = document.createElement("div");
-        //<div></div>
-        trackEl.classList.add(track.wrapperType);
-        //<div class="track"></div>
+//DEFAULT FILTER
+const filter = {
+    keyword:"",
+    sortProp:"trackPrice",
+    asc:false
+}
 
-        trackEl.innerHTML = `
-            <img src="${track.artworkUrl100}"/>
-            <div cla>
-                <p class="title">${track.trackName}</p>
-                <p class="artist">${track.artistName}</p>
-                <p class="releaseDate">${formatDate(track.releaseDate)}</p>
-                <p class="price">${track.trackPrice} ${track.currency}</p>
-            </div>
+const renderTracks = (tracks)=> {
+    //FILTERING
+    if(filter.keyword){
+        tracks = tracks.filter(
+        track=>track.artistName.toLocaleLowerCase().includes(filter.keyword) 
+        || track.trackName.toLocaleLowerCase().includes(filter.keyword))
+    }
+
+    //SORTING
+    if(filter.sortProp === "price"){
+        tracks = tracks.sort((trackA,trackB)=>{
+            if(filter.asc){
+                return trackA.trackPrice - trackB.trackPrice;
+            }
+            return trackB.trackPrice - trackA.trackPrice;
+        });
+    } else {
+        tracks = tracks.sort((trackA,trackB)=>{
+            if(trackA[filter.sortProp]<trackB[filter.sortProp]){
+                return filter.asc ? -1 : 1;
+            } else if(trackA[filter.sortProp]>trackB[filter.sortProp]){
+                return filter.asc ? 1 : -1;
+            } else {
+                return 0;
+            }
+        });
+    }
+
+    const body = document.querySelector("tbody");
+    body.innerHTML = ""
+    tracks.forEach((track,i) => {
+        const { trackName,artistName,artworkUrl60,releaseDate,trackPrice,currency, wrapperType } = track;
+        const trackEl = document.createElement("tr");
+        trackEl.classList.add(wrapperType,"bg-light","border-bottom");
+        trackEl.innerHTML = `<tr>
+            <td><img src="${artworkUrl60}"/></td>
+            <td><p class="artist">${artistName}</p></td>
+            <td><p class="title ">${trackName}</p></td>
+            <td><p class="releaseDate">${formatDate(releaseDate)}</p></td>
+            <td><p class="price">${trackPrice<=0 ? "Free": trackPrice+currency}</p></td>
+            </tr>
         `
 
-        document.querySelector("main").appendChild(trackEl);
+        body.appendChild(trackEl);
     })
+    document.querySelector("#count").textContent = music.length>0 
+        ?`There are ${tracks.length} tracks on the list`
+        :"No tracks were found"
 }
 
 
 document.querySelector("#search").addEventListener("keyup",(e)=> {
-    const keyword = e.target.value.toLocaleLowerCase();
-
-    const filteredMusic = music.filter(
-        track=>track.artistName.toLocaleLowerCase().includes(keyword) 
-        || track.trackName.toLocaleLowerCase().includes(keyword))
-
-    if(filteredMusic.length===0){
-        document.querySelector("main").innerHTML = "<p>No tracks were found</p>";
-        return;
-    }
-
-    renderTracks(filteredMusic);
+    filter.keyword = e.target.value.toLocaleLowerCase();
+    renderTracks(music);
 })
+
+document.querySelectorAll("thead th:not(:first-child)").forEach(th=>th.addEventListener("click",(e)=> {
+    if(filter.sortProp===e.target.id){
+        filter.asc = !filter.asc
+    } else {
+        filter.sortProp = e.target.id;
+    }
+    
+    console.log(filter)
+    renderTracks(music);
+}))
+
+document
+    .querySelectorAll("input[type='checkbox']")
+    .forEach(input=>input.addEventListener("change",(e)=>{
+        renderTracks(music)
+    }))
 
 renderTracks(music);
