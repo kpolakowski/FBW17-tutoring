@@ -50,8 +50,7 @@ const renderTracks = (tracks)=> {
             <td><p class="releaseDate">${formatDate(releaseDate)}</p></td>
             <td><p class="price">${trackPrice<=0 ? "Free": trackPrice+currency}</p></td>
             </tr>
-        `
-
+        `;
         body.appendChild(trackEl);
     })
     document.querySelector("#count").textContent = music.length>0 

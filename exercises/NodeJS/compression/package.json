@@ -1,0 +1,20 @@
+{
+  "name": "nodejs-streams-05-compress-file-kpolakowski",
+  "version": "1.0.0",
+  "description": "### Compress File",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FBW-17/nodejs-streams-05-compress-file-kpolakowski.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FBW-17/nodejs-streams-05-compress-file-kpolakowski/issues"
+  },
+  "homepage": "https://github.com/FBW-17/nodejs-streams-05-compress-file-kpolakowski#readme"
+}
