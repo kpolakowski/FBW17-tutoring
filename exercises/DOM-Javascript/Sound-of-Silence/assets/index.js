@@ -11,11 +11,13 @@ const filter = {
 
 const renderTracks = (tracks)=> {
     //FILTERING
-    if(filter.keyword){
+    if(filter.keyword!==""){
         tracks = tracks.filter(
         track=>track.artistName.toLocaleLowerCase().includes(filter.keyword) 
-        || track.trackName.toLocaleLowerCase().includes(filter.keyword))
+        //|| track.trackName.toLocaleLowerCase().includes(filter.keyword))
     }
+
+    
 
     //SORTING
     if(filter.sortProp === "price"){
@@ -46,7 +48,7 @@ const renderTracks = (tracks)=> {
         trackEl.innerHTML = `<tr>
             <td><img src="${artworkUrl60}"/></td>
             <td><p class="artist">${artistName}</p></td>
-            <td><p class="title ">${trackName}</p></td>
+            <td><p class="title ">${trackName.slice(0,15)}</p></td>
             <td><p class="releaseDate">${formatDate(releaseDate)}</p></td>
             <td><p class="price">${trackPrice<=0 ? "Free": trackPrice+currency}</p></td>
             </tr>

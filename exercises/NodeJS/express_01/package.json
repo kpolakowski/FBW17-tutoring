@@ -1,0 +1,17 @@
+{
+  "name": "express_01",
+  "version": "1.0.0",
+  "description": "- Create a http server with ExpressJS Framework - Define a local database with `lowdb` module. Initialize it with property `users` set to empty array, and synchronize it with `db.json` file - Define following routes:     - /users (GET method)         - this route should display list of all users from our local database         - this route can take 2 parameters     - /users/add (POST method)         - this route should display HTML form in the browser         - displayed form should have text input, with attribute `name` set to __username__, and submit button         - form itself should have `method` attribute set to \"__post__\", and `action` attribute set to \"__users/add__\"",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon -e js app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "lowdb": "^1.0.0",
+    "morgan": "^1.9.1"
+  }
+}
