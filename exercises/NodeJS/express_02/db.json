@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "username": "aaaa",
+      "age": "30"
+    },
+    {
+      "username": "Karol",
+      "age": "30"
+    },
+    {
+      "username": "Nic",
+      "age": "18"
+    },
+    {
+      "username": "fsgjhfsa",
+      "age": "21"
+    },
+    {
+      "username": "ssss",
+      "age": "12"
+    },
+    {
+      "username": "Martina",
+      "age": "20"
+    }
+  ]
+}
